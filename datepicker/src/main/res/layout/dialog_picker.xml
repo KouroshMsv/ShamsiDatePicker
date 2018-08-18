@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/container"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+
+  <android.support.v7.widget.AppCompatTextView
+    android:id="@+id/dateText"
+    android:textStyle="bold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:paddingTop="30dp"
+    android:paddingBottom="30dp"
+    android:textColor="@color/textColor"
+    android:background="?android:attr/colorPrimary"
+    android:gravity="center"
+    android:textSize="16sp"
+    tools:text="سه شنبه"/>
+
+  <mousavi.kourosh.datepicker.PersianDatePicker
+    android:id="@+id/datePicker"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    app:displayMonthNames="true"
+    />
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:padding="8dp"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.AppCompatButton
+      android:id="@+id/positive_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="12sp"
+      android:theme="@style/buttonPrimaryColored"
+      tools:text="ok"/>
+
+    <android.support.v7.widget.AppCompatButton
+      android:id="@+id/negative_button"
+      style="@style/buttonPrimaryBorderlessColored"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="2dp"
+      android:textColor="?android:attr/colorPrimary"
+      android:textSize="12sp"
+      tools:text="cancel"/>
+
+    <View
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_weight="1"/>
+
+    <android.support.v7.widget.AppCompatButton
+      android:id="@+id/today_button"
+      style="@style/buttonPrimaryBorderlessColored"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="?android:attr/colorPrimary"
+      android:textSize="12sp"
+      android:visibility="gone"
+      tools:text="today"
+      tools:visibility="visible"/>
+
+  </LinearLayout>
+
+</LinearLayout>

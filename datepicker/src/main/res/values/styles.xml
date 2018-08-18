@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="buttonPrimaryColored" parent="@style/Widget.AppCompat.Button.Colored">
+    <item name="android:textColor">@color/textColor</item>
+    <item name="colorButtonNormal">?android:attr/colorPrimary</item>
+  </style>
+
+  <style name="buttonPrimaryBorderlessColored" parent="@style/Widget.AppCompat.Button.Borderless.Colored">
+    <item name="android:textColor">?android:attr/colorPrimary</item>
+  </style>
+
+
+</resources>

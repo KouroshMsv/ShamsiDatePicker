@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:orientation="horizontal"
+  android:gravity="center"
+  android:padding="8dp"
+  android:layout_height="wrap_content">
+
+
+  <NumberPicker
+    android:id="@+id/yearNumberPicker"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:background="#fff"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    android:descendantFocusability="blocksDescendants"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/monthNumberPicker"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <NumberPicker
+    android:id="@+id/monthNumberPicker"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:background="#fff"
+    android:descendantFocusability="blocksDescendants"
+    app:layout_constraintEnd_toStartOf="@id/dayNumberPicker"
+    app:layout_constraintBottom_toBottomOf="@+id/yearNumberPicker"
+    app:layout_constraintStart_toEndOf="@+id/yearNumberPicker"
+    app:layout_constraintTop_toTopOf="@+id/yearNumberPicker"/>
+
+  <NumberPicker
+    android:id="@+id/dayNumberPicker"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:background="#fff"
+    android:descendantFocusability="blocksDescendants"
+    android:showDividers="beginning"
+    app:layout_constraintBottom_toBottomOf="@+id/monthNumberPicker"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/monthNumberPicker"
+    app:layout_constraintTop_toTopOf="@+id/monthNumberPicker"/>
+
+  
+</LinearLayout>
