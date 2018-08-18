@@ -19,7 +19,7 @@ import mousavi.kourosh.datepicker.util.PersianHelper
 import java.util.*
 
 
-class PersianDatePicker(mContext: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout(mContext, attrs, defStyleAttr) {
+internal class PersianDatePicker(mContext: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout(mContext, attrs, defStyleAttr) {
     constructor(mContext: Context, attrs: AttributeSet? = null) : this(mContext, attrs, 0)
 
     private val pCalendar: PersianCalendar
@@ -289,44 +289,26 @@ class PersianDatePicker(mContext: Context, attrs: AttributeSet? = null, defStyle
         mListener = onDateChangedListener
     }
 
-    /**
-     * The callback used to indicate the user changed the date.
-     * A class that wants to be notified when the date of PersianDatePicker
-     * changes should implement this interface and register itself as the
-     * listener of date change events using the PersianDataPicker's
-     * setOnDateChangedListener method.
-     */
     interface OnDateChangedListener {
 
-        /**
-         * Called upon a date change.
-         *
-         * @param newYear  The year that was set.
-         * @param newMonth The month that was set (1-12)
-         * @param newDay   The day of the month that was set.
-         */
         fun onDateChanged(newYear: Int, newMonth: Int, newDay: Int)
     }
 
     override fun onSaveInstanceState(): Parcelable? {
-        // begin boilerplate code that allows parent classes to save state
         val superState = super.onSaveInstanceState()
         val ss = SavedState(superState)
-        // end
 
         ss.datetime = this.displayDate.time
         return ss
     }
 
     override fun onRestoreInstanceState(state: Parcelable) {
-        // begin boilerplate code so parent classes can restore state
         if (state !is SavedState) {
             super.onRestoreInstanceState(state)
             return
         }
 
         super.onRestoreInstanceState(state.superState)
-        // end
 
         displayDate = Date(state.datetime)
     }

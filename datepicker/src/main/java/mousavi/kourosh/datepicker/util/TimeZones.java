@@ -2,10 +2,6 @@ package mousavi.kourosh.datepicker.util;
 
 import java.util.TimeZone;
 
-/**
- * This is simply all the available TimeZones from java.util.TimeZone as type
- * safe enum
- */
 public enum TimeZones {
 	DEFAULT(TimeZone.getDefault()),
 	// default JDK 1.4.2 time zones

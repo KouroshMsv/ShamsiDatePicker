@@ -19,9 +19,6 @@ import mousavi.kourosh.datepicker.util.PersianCalendar
 import mousavi.kourosh.datepicker.util.PersianHelper
 import java.util.*
 
-/**
- * Created by aliabdolahi on 1/23/17.
- */
 
 class PersianDatePickerDialog(private val context: Context) {
     private var positiveButtonString = "تایید"
